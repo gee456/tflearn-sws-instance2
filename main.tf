@@ -18,7 +18,7 @@ resource "aws_instance" "app_server" {
   ami           = "ami-830c94e3"
   instance_type = "t2.micro"
   key_name = "tftest"
-
+  security_groups = [ "sg-0eb6cb3204ccc3718" ]
   tags = {
       Name = var.instance_name
   }
